@@ -23,8 +23,7 @@ default['postgres']['client']['packages']      = %w(postgresql92-client)
 default['postgres']['config']['encoding']      = "UTF8"
 default['postgres']['config']['locale']        = "en_US.UTF-8"
 
-default['postgres']['config']['stats_temp_directory']       
-                                               = "/tmp/pg_stats_temp_directory"
+default['postgres']['config']['stats_temp_directory'] = "/tmp/pg_stats_temp_directory"
 
 # shared_buffers_mb will be automatically set to 25% of available RAM, up to 8Gb
 # unless specified explicitly. cache size is auto-set to 70% of available RAM.
