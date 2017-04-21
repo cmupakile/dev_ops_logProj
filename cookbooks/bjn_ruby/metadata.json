@@ -1,0 +1,49 @@
+{
+  "name": "bjn_ruby",
+  "description": "Ruby for Blue Jeans nodes",
+  "long_description": "Ruby for Blue Jeans nodes",
+  "maintainer": "Sean Clemmer / Blue Jeans Network",
+  "maintainer_email": "sclemmer@bluejeans.com",
+  "license": "ISC",
+  "platforms": {
+    "ubuntu": ">= 0.0.0"
+  },
+  "dependencies": {
+    "apt": ">= 0.0.0",
+    "magic": ">= 0.0.0"
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+    "ruby": ">= 0.0.0"
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "2.2.3",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false,
+  "chef_versions": [
+
+  ],
+  "ohai_versions": [
+
+  ]
+}

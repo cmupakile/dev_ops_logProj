@@ -36,7 +36,7 @@ end
 
 Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "echo Hello"
-  
+
   config.vm.define "rails" do |rails|
     rails.berkshelf.berksfile_path = "cookbooks/node-server/Berksfile"
     rails.vm.provider :virtualbox do |vb|
@@ -50,7 +50,7 @@ Vagrant.configure("2") do |config|
      # config.vm.provision "shell", path: "provision.sh"
      rails.vm.provision "chef_solo" do |chef|
        chef.cookbooks_path = ['cookbooks']
-       chef.run_list =['recipe[node-server::default-cookbook]']
+       chef.run_list =['recipe[node-server::default]']
      end
   end
 
@@ -64,7 +64,7 @@ Vagrant.configure("2") do |config|
     db.hostsupdater.aliases = ["database.local"]
     db.vm.provision "chef_solo" do |chef|
       chef.cookbooks_path = ['cookbooks']
-      chef.run_list =['recipe[postgresql::postgre-cookbook]']
+      chef.run_list =['recipe[postgresql::postgre]']
     end
   end
 end

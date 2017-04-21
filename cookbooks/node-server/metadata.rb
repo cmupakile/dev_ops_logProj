@@ -16,10 +16,10 @@ chef_version '>= 12.1' if respond_to?(:chef_version)
 # The `source_url` points to the development reposiory for this cookbook.  A
 # `View Source` link will be displayed on this cookbook's page when uploaded to
 # a Supermarket.
-#
-# source_url 'https://github.com/<insert_org_here>/node-server'
-# name              'postgresql'
-# maintainer        'Sous Chefs'
-# maintainer_email  'help@sous-chefs.org'
-# license           'Apache 2.0'
-# description       'Installs and configures postgresql for clients or servers'
+# opscode cookbooks
+# depends 'apt'
+# depends 'build-essential'
+depends 'nodejs', '~> 3.0.0'
+depends 'git', '~> 6.0.0'
+# depends 'ruby_build', '1.1.0'
+depends 'bjn_ruby', '~> 2.2.3'
