@@ -64,3 +64,5 @@ default['postgres']['listen_interfaces']                 = ["net1", "lo0"]
 default['postgres']['connections']  = {
     "127.0.0.1/0" => "trust"
 }
+
+recipe[ruby_build]

@@ -50,7 +50,7 @@ Vagrant.configure("2") do |config|
      # config.vm.provision "shell", path: "provision.sh"
      rails.vm.provision "chef_solo" do |chef|
        chef.cookbooks_path = ['cookbooks']
-       chef.run_list =['recipe[node-server::default-cookbook ]']
+       chef.run_list =['recipe[node-server::default-cookbook]']
      end
   end
 
