@@ -6,14 +6,10 @@
 # include_recipe 'postgresql::client'
 # recipe[postgresql::client]
 include_recipe 'apt'
+magic_shell_environment 'DATABASE_URL' do
+  value 'vim'
+end
 
-
-
-
-
-# package 'postgresql'
-# package 'postgresql-contrib'
-##############
 package 'nginx' do
 	action :install
 end
