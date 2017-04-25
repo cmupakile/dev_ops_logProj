@@ -25,9 +25,9 @@ describe command('git --version') do
 end
 
 describe command('ruby --version') do
-  its(:stdout) { should match /2\.4\.0/}
+  its(:stdout) { should match /2\.3\.1/}
 end
 
-describe package('rbenv') do
-  it { should be_installed.by('ruby_rbenv::user') }
-end
+# describe package('rbenv') do
+#   it { should be_installed.by('ruby_rbenv::user') }
+# end
