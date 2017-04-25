@@ -1,12 +1,12 @@
 #pull down new code
 
-cd ~/spartagramEnvironment
+cd ~/dev_ops_logProj
 git pull
 berks vendor cookbooks
 sudo chef-client --local-mode --runlist 'recipe[rails-server]'
 
 
-cd ~/SpartaGram
+cd ~/app
 git pull
 rbenv rehash
 gem install bundler
