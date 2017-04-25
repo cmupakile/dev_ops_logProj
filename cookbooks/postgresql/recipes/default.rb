@@ -1,7 +1,5 @@
 #
-# Cookbook:: postgres-server
+# Cookbook:: postgresql
 # Recipe:: default
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
-
-include_recipe 'postgresql::server'
