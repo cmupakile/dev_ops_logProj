@@ -11,7 +11,6 @@ Vagrant.configure("2") do |config|
       rails.vm.network "private_network", ip: "192.168.10.100"
       rails.hostsupdater.aliases = ["development.local"]
       rails.vm.synced_folder "../app", "/home/ubuntu/app"
-      rails.vm.synced_folder ".", "/home/ubuntu/environment"
       rails.vm.provision "chef_solo" do |chef|
           chef.cookbooks_path = ['cookbooks']
           chef.run_list = ['recipe[rails-server::default]']
@@ -21,7 +20,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "db" do |db|
     db.vm.box = "ubuntu/trusty64"
     db.vm.network "private_network", ip: "192.168.10.150"
-    db.hostsupdater.aliases = ["development.local"]
+    db.hostsupdater.aliases = ["database.local"]
     db.vm.provision "chef_solo" do |chef|
         chef.cookbooks_path = ['cookbooks']
         chef.run_list = ['recipe[postgresql-server::default]']

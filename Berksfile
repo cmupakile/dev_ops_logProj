@@ -1,4 +1,4 @@
 source 'https://supermarket.chef.io'
 
-cookbook 'rails-server', path: './cookbooks/rails-server'
-cookbook 'postgresql-server', path: './cookbooks/postgresql-server'
+cookbook 'rails-server', git: 'git@github.com:spartaglobal/rails-server-cookbook.git'
+cookbook 'postgres-server', git: 'git@github.com:spartaglobal/postgresql-server-cookbook.git'
