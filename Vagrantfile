@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
       rails.vm.synced_folder ".", "/home/ubuntu/environment"
       rails.vm.provision "chef_solo" do |chef|
           chef.cookbooks_path = ['cookbooks']
-          chef.run_list = ['recipe[node-server::default]']
+          chef.run_list = ['recipe[rails-server::default]']
       end
   end
 
