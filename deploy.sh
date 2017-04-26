@@ -12,5 +12,4 @@ rbenv rehash
 gem install bundler
 rbenv rehash
 
-
 rails s
